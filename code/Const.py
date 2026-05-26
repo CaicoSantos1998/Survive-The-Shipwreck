@@ -10,25 +10,52 @@ COLOR_BLACK = (0, 0, 0)
 COLOR_BLUE = (0, 0, 139)
 # E
 ENTITY_SPEED = {
-    'Level1BG0': 0,
-    'Level1BG1': 1,
-    'Level1BG2': 2,
-    'Level1BG3': 3,
-    'Level1BG4': 4,
-    'ShipPlayer1': 4,
-    # 'ShipPlayer1Shot': 2.5,
-    'ShipEnemy1': 2,
-    'ShipEnemy2': 2
+    'Level1Bg0': 0,
+    'Level1Bg1': 1,
+    'Level1Bg2': 2,
+    'Level1Bg3': 3,
+    'Level1Bg4': 4,
+    'Player': 4,
+    # 'Player1Shot': 2.5,
+    'Enemy1': 2,
+    'Enemy2': 2
+}
+ENTITY_HEALTH = {
+    'Level1Bg0': 999,
+    'Level1Bg1': 999,
+    'Level1Bg2': 999,
+    'Level1Bg3': 999,
+    'Level1Bg4': 999,
+    'Player': 100,
+    # 'Player1Shot': 1,
+    # 'Enemy1': 280,
+    # 'Enemy2': 300,
+    # 'Enemy1Shot': 1,
+    # 'Enemy2Shot': 1
+}
+ENTITY_SCORE = {
+    'Level1Bg0': 0,
+    'Level1Bg1': 0,
+    'Level1Bg2': 0,
+    'Level1Bg3': 0,
+    'Level1Bg4': 0,
+    'Player': 0,
+    'Player1Shot': 0,
+    # 'Enemy1': 8,
+    # 'Enemy1Shot': 0,
+    # 'Enemy2': 5,
+    # 'Enemy2Shot': 0
 }
 # M
 MENU_OPTION = ('NEW GAME',
                'SCORE',
-               'EXIT')
+               'EXIT'
+)
 # P
-PLAYER_KEY_W = {'ShipPlayer1': pg.K_w}
-PLAYER_KEY_S = {'ShipPlayer1': pg.K_s}
-PLAYER_KEY_A = {'ShipPlayer1': pg.K_a}
-PLAYER_KEY_D = {'ShipPlayer1': pg.K_d}
+PLAYER_KEY_W = {'Player': pg.K_w}
+PLAYER_KEY_S = {'Player': pg.K_s}
+PLAYER_KEY_A = {'Player': pg.K_a}
+PLAYER_KEY_D = {'Player': pg.K_d}
 # PLAYER_KEY_SHOOT = {'ShipPlayer1': pg.K_SPACE}
 # S
 SCREEN_WIDTH = 720

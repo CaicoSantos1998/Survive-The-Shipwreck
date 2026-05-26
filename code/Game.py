@@ -1,6 +1,7 @@
 import pygame as pg
 
 from code.Const import SCREEN_WIDTH, SCREEN_HEIGHT, MENU_OPTION
+from code.Level import Level
 from code.Menu import Menu
 
 
@@ -14,8 +15,9 @@ class Game:
             menu = Menu(self.screen)
             menu_return = menu.run()
             if menu_return in [MENU_OPTION[0]]:
-                pass
-            elif menu_return in [MENU_OPTION[3]]:
+                level = Level(self.screen, 'Level1', menu_return)
+                level.run()
+            elif menu_return in [MENU_OPTION[2]]:
                 pg.quit()
                 quit()
             else:
