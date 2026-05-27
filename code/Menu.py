@@ -14,6 +14,9 @@ class Menu:
 
     def run(self):
         menu_option = 0
+        pg.mixer_music.load('./asset/MenuMusic.wav')
+        pg.mixer_music.set_volume(0.5)
+        pg.mixer_music.play(-1)
         while True:
             self.screen.blit(source=self.surf, dest=self.rect)
             self.m_text(TEXT_SIZE_TITLE, "Survive", COLOR_BLUE, ((SCREEN_WIDTH/2), 60))

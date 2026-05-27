@@ -20,6 +20,9 @@ class Level:
         self.entity_list.append(player)
 
     def run(self):
+        pg.mixer_music.load(f'./asset/{self.name}Music.mp3')
+        pg.mixer_music.set_volume(1)
+        pg.mixer_music.play(-1)
         clock = pg.time.Clock()
         while True:
             clock.tick(60)
