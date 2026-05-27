@@ -4,7 +4,7 @@ import pygame as pg
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import COLOR_WHITE, TEXT_SIZE, COLOR_GREEN
+from code.Const import COLOR_WHITE, TEXT_SIZE, COLOR_GREEN, COLOR_ORANGE, COLOR_BLUE, COLOR_BLACK
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 
@@ -26,25 +26,18 @@ class Level:
             for entity in self.entity_list:
                 self.screen.blit(source=entity.surf, dest=entity.rect)
                 entity.move()
-                if entity.name:
-                    self.level_text(TEXT_SIZE, f'Player - Health: {entity.health} | Score: ',
-                                    COLOR_GREEN, (5, 25))
+                if entity.name == 'Player':
+                    self.level_text(TEXT_SIZE, f'Health: {entity.health}',
+                                    COLOR_ORANGE, (5, 25))
                 for event in pg.event.get():
                     if event.type == pg.QUIT:
                         pg.quit()
                         sys.exit()
-
-
-
-
-
-
-
-            self.level_text(TEXT_SIZE, f'{self.name}', COLOR_WHITE, (5, 5))
+            self.level_text(TEXT_SIZE, f'{self.name}', COLOR_ORANGE, (5, 5))
             pg.display.flip()
 
     def level_text(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):
-        text_font: Font = pg.font.SysFont(name="TT Trailers", size=text_size)
+        text_font: Font = pg.font.SysFont(name="Arial", size=text_size)
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(left=text_pos[0], top=text_pos[1])
         self.screen.blit(source=text_surf, dest=text_rect)

@@ -14,7 +14,6 @@ class Menu:
 
     def run(self):
         menu_option = 0
-
         while True:
             self.screen.blit(source=self.surf, dest=self.rect)
             self.m_text(TEXT_SIZE_TITLE, "Survive", COLOR_BLUE, ((SCREEN_WIDTH/2), 60))

@@ -1,5 +1,8 @@
 import pygame as pg
 
+# A
+ANIMATION_SPEED = 9
+
 # C
 COLOR_CYAN = (0, 128, 128)
 COLOR_GREEN = (0, 128, 0)
@@ -15,10 +18,10 @@ ENTITY_SPEED = {
     'Level1Bg2': 2,
     'Level1Bg3': 3,
     'Level1Bg4': 4,
-    'Player': 4,
+    'Player': 2,
     # 'Player1Shot': 2.5,
-    'Enemy1': 2,
-    'Enemy2': 2
+    # 'Enemy1': 2,
+    # 'Enemy2': 2
 }
 ENTITY_HEALTH = {
     'Level1Bg0': 999,
@@ -40,22 +43,25 @@ ENTITY_SCORE = {
     'Level1Bg3': 0,
     'Level1Bg4': 0,
     'Player': 0,
-    'Player1Shot': 0,
+    # 'Player1Shot': 0,
     # 'Enemy1': 8,
     # 'Enemy1Shot': 0,
     # 'Enemy2': 5,
     # 'Enemy2Shot': 0
 }
+# F
+FRAME_WIDTH = 48
+FRAME_HEIGHT = 48
 # M
 MENU_OPTION = ('NEW GAME',
                'SCORE',
                'EXIT'
 )
 # P
-PLAYER_KEY_W = {'Player': pg.K_w}
-PLAYER_KEY_S = {'Player': pg.K_s}
-PLAYER_KEY_A = {'Player': pg.K_a}
-PLAYER_KEY_D = {'Player': pg.K_d}
+PLAYER_KEY_W = {'PlayerSwimUp': pg.K_w}
+PLAYER_KEY_S = {'PlayerSwimDown': pg.K_s}
+PLAYER_KEY_A = {'PlayerSwimLeft': pg.K_a}
+PLAYER_KEY_D = {'PlayerSwimRight': pg.K_d}
 # PLAYER_KEY_SHOOT = {'ShipPlayer1': pg.K_SPACE}
 # S
 SCREEN_WIDTH = 720
@@ -64,5 +70,5 @@ SCREEN_HEIGHT = 405
 TEXT_SIZE_TITLE = 120
 TEXT_SIZE_MENU = 45
 TEXT_SIZE = 20
-TIMEOUT_STEP = 100
-TIMEOUT_LEVEL = 10000
+# TIMEOUT_STEP = 100
+# TIMEOUT_LEVEL = 10000
