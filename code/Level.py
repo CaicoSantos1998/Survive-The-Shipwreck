@@ -18,6 +18,10 @@ class Level:
         self.entity_list.extend(EntityFactory.get_entity(self.name + 'Bg'))
         player = EntityFactory.get_entity('Player')
         self.entity_list.append(player)
+        self.entity_list.append(EntityFactory.get_entity('SharkSwim'))
+        self.entity_list.append(EntityFactory.get_entity('OctopusSwim'))
+        self.entity_list.append(EntityFactory.get_entity('EelSwim'))
+        self.entity_list.append(EntityFactory.get_entity('FishBlackDevilSwim'))
 
     def run(self):
         pg.mixer_music.load(f'./asset/{self.name}Music.mp3')

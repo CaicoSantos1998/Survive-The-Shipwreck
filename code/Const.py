@@ -20,8 +20,10 @@ ENTITY_SPEED = {
     'Level1Bg4': 4,
     'Player': 2,
     # 'Player1Shot': 2.5,
-    # 'Enemy1': 2,
-    # 'Enemy2': 2
+    'SharkSwim': 8,
+    'OctopusSwim': 3,
+    'EelSwim': 2,
+    'FishBlackDevilSwim': 5,
 }
 ENTITY_HEALTH = {
     'Level1Bg0': 999,
