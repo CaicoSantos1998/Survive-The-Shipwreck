@@ -21,11 +21,12 @@ class Menu:
             self.screen.blit(source=self.surf, dest=self.rect)
             self.m_text(TEXT_SIZE_TITLE, "Survive", COLOR_BLUE, ((SCREEN_WIDTH/2), 60))
             self.m_text(TEXT_SIZE_TITLE, "The Shipwreck", COLOR_BLUE, ((SCREEN_WIDTH/2), 140))
-            self.m_text(30, "Control Commands", COLOR_BLUE, (SCREEN_WIDTH - 100, 300))
-            self.m_text(TEXT_SIZE, "Up - W", COLOR_WHITE, (SCREEN_WIDTH - 100, 320))
-            self.m_text(TEXT_SIZE, "Left - A", COLOR_WHITE, (SCREEN_WIDTH - 100, 340))
-            self.m_text(TEXT_SIZE, "Down - S", COLOR_WHITE, (SCREEN_WIDTH - 100, 360))
-            self.m_text(TEXT_SIZE, "Right - D", COLOR_WHITE, (SCREEN_WIDTH - 100, 380))
+            self.m_text(30, "Control Commands", COLOR_BLUE, (SCREEN_WIDTH - 100, 290))
+            self.m_text(TEXT_SIZE, "Up - W", COLOR_WHITE, (SCREEN_WIDTH - 100, 310))
+            self.m_text(TEXT_SIZE, "Left - A", COLOR_WHITE, (SCREEN_WIDTH - 100, 330))
+            self.m_text(TEXT_SIZE, "Down - S", COLOR_WHITE, (SCREEN_WIDTH - 100, 350))
+            self.m_text(TEXT_SIZE, "Right - D", COLOR_WHITE, (SCREEN_WIDTH - 100, 370))
+            self.m_text(TEXT_SIZE, "Space - Attack", COLOR_WHITE, (SCREEN_WIDTH - 100, 390))
             for op in range(len(MENU_OPTION)):
                 if op == menu_option:
                     self.m_text(TEXT_SIZE_MENU, MENU_OPTION[op], COLOR_WHITE, ((SCREEN_WIDTH/2), 290+25*op))

@@ -20,10 +20,4 @@ class EntityFactory:
                 return Player('Player', (10, SCREEN_HEIGHT/2))
             case 'SharkSwim':
                 return Enemy('SharkSwim', (SCREEN_WIDTH+10, random.randint(40, SCREEN_HEIGHT - 20)))
-            case 'OctopusSwim':
-                return Enemy('OctopusSwim', (SCREEN_WIDTH+10, random.randint(40, SCREEN_HEIGHT - 40)))
-            case 'EelSwim':
-                return Enemy('EelSwim', (SCREEN_WIDTH+10, random.randint(40, SCREEN_HEIGHT - 60)))
-            case 'FishBlackDevilSwim':
-                return Enemy('FishBlackDevilSwim', (SCREEN_WIDTH+10, random.randint(40, SCREEN_HEIGHT - 80)))
         return None

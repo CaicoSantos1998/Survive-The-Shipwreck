@@ -13,17 +13,14 @@ COLOR_BLACK = (0, 0, 0)
 COLOR_BLUE = (0, 0, 139)
 # E
 ENTITY_SPEED = {
-    'Level1Bg0': 0,
-    'Level1Bg1': 1,
-    'Level1Bg2': 2,
-    'Level1Bg3': 3,
-    'Level1Bg4': 4,
+    'Level1Bg0': 0.2,
+    'Level1Bg1': 0.7,
+    'Level1Bg2': 0.8,
+    'Level1Bg3': 1,
+    'Level1Bg4': 1.3,
     'Player': 2,
-    # 'Player1Shot': 2.5,
-    'SharkSwim': 8,
-    'OctopusSwim': 3,
-    'EelSwim': 2,
-    'FishBlackDevilSwim': 5,
+    'PlayerAttack': 2.5,
+    'SharkSwim': 4
 }
 ENTITY_HEALTH = {
     'Level1Bg0': 999,
@@ -32,11 +29,7 @@ ENTITY_HEALTH = {
     'Level1Bg3': 999,
     'Level1Bg4': 999,
     'Player': 100,
-    # 'Player1Shot': 1,
-    # 'Enemy1': 280,
-    # 'Enemy2': 300,
-    # 'Enemy1Shot': 1,
-    # 'Enemy2Shot': 1
+    'Shark': 25,
 }
 ENTITY_SCORE = {
     'Level1Bg0': 0,
@@ -45,12 +38,8 @@ ENTITY_SCORE = {
     'Level1Bg3': 0,
     'Level1Bg4': 0,
     'Player': 0,
-    # 'Player1Shot': 0,
-    # 'Enemy1': 8,
-    # 'Enemy1Shot': 0,
-    # 'Enemy2': 5,
-    # 'Enemy2Shot': 0
 }
+ENEMY_DAMAGE=5
 # F
 FRAME_WIDTH = 48
 FRAME_HEIGHT = 48
@@ -64,7 +53,8 @@ PLAYER_KEY_W = {'PlayerSwimUp': pg.K_w}
 PLAYER_KEY_S = {'PlayerSwimDown': pg.K_s}
 PLAYER_KEY_A = {'PlayerSwimLeft': pg.K_a}
 PLAYER_KEY_D = {'PlayerSwimRight': pg.K_d}
-# PLAYER_KEY_SHOOT = {'ShipPlayer1': pg.K_SPACE}
+PLAYER_ATTACK = {'PlayerAttack': pg.K_SPACE}
+PLAYER_DAMAGE = 25
 # S
 SCREEN_WIDTH = 720
 SCREEN_HEIGHT = 405
