@@ -26,11 +26,14 @@ class Player(Entity):
         self.current_frame = 0
         self.animation_counter = 0
         self.animation_speed = ANIMATION_SPEED
+        self.score = 0
+        self.distance = 0
 
     def move(self, player_rect=None):
         pressed_key = pg.key.get_pressed()
         next_image = self.player_frame_idle
         moved = False
+        moved_forward = False
         if self.state == 'attack':
             self.animation_counter+=1
             if self.animation_counter>=self.animation_speed:
@@ -53,21 +56,27 @@ class Player(Entity):
             self.rect.centery -= ENTITY_SPEED[self.name]
             next_image = self.player_frame_swim_up
             moved = True
+            moved_forward = False
         if pressed_key[PLAYER_KEY_S.get(self.name, pg.K_s)] and self.rect.bottom < SCREEN_HEIGHT:
             self.rect.centery += ENTITY_SPEED[self.name]
             next_image = self.player_frame_swim_down
             moved = True
+            moved_forward = False
         if pressed_key[PLAYER_KEY_A.get(self.name, pg.K_a)] and self.rect.left>0:
             self.rect.centerx -= ENTITY_SPEED[self.name]
             next_image = self.player_frame_swim_left
             moved = True
+            moved_forward = False
         if pressed_key[PLAYER_KEY_D.get(self.name, pg.K_d)] and self.rect.right < SCREEN_WIDTH:
             self.rect.centerx += ENTITY_SPEED[self.name]
             next_image = self.player_frame_swim_right
             moved = True
+            moved_forward = True
         if not moved:
             self.rect.x += 0
             self.rect.y += 0
+        if moved_forward:
+            self.distance+=0.5
         if next_image != self.player_frame:
             self.player_frame = next_image
             self.current_frame = 0
@@ -76,7 +85,6 @@ class Player(Entity):
         if self.animation_counter >= self.animation_speed:
             self.animation_counter = 0
             self.current_frame += 1
-            total_frames_player = self.player_frame.get_width() // self.frame_width
             if self.current_frame >= 6:
                 self.current_frame = 0
         new_position = self.current_frame * self.frame_width

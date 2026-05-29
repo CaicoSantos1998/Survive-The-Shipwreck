@@ -37,8 +37,8 @@ class Enemy(Entity):
             if self.animation_count >= self.animation_speed:
                 self.animation_count = 0
                 self.current_frame += 1
-                total_frames_morte = self.enemy_death.get_width() // self.frame_width
-                if self.current_frame >= total_frames_morte or self.current_frame >= 6:
+                total_frame_death = self.enemy_death.get_width() // self.frame_width
+                if self.current_frame >= total_frame_death or self.current_frame >= 6:
                     self.rect.x = 720
                     self.rect.y = random.randint(20, 405)
                     self.health = 25
@@ -58,8 +58,8 @@ class Enemy(Entity):
         if self.attack_cooldown > 0:
             self.attack_cooldown -= 1
         if self.name == 'SharkSwim' and player_rect and self.state == 'swim' and self.attack_cooldown == 0:
-            distancia = pg.math.Vector2(self.rect.center).distance_to(player_rect.center)
-            if distancia < 45:
+            distance = pg.math.Vector2(self.rect.center).distance_to(player_rect.center)
+            if distance < 45:
                 self.state = 'attack'
                 self.current_frame = 0
                 self.animation_count = 0

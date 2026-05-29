@@ -1,6 +1,4 @@
-import random
-
-from code.Const import ENEMY_DAMAGE, PLAYER_DAMAGE, SCREEN_WIDTH, ENTITY_HEALTH
+from code.Const import ENEMY_DAMAGE, PLAYER_DAMAGE
 from code.Enemy import Enemy
 from code.Entity import Entity
 from code.Player import Player
@@ -58,3 +56,5 @@ class EntityMediator:
                 if player.state == 'attack' and enemy.state != 'death' and not player.has_given_damage:
                     enemy.health -= PLAYER_DAMAGE
                     player.has_given_damage = True
+                    if enemy.health<=0:
+                        player.score+=100

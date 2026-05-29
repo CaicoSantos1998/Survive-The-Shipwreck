@@ -11,6 +11,9 @@ COLOR_YELLOW = (225, 255, 128)
 COLOR_WHITE = (255, 255, 255)
 COLOR_BLACK = (0, 0, 0)
 COLOR_BLUE = (0, 0, 139)
+COLOR_RED = (255, 0, 0)
+# D
+DISTANCE_TO_WIN = 1000
 # E
 ENTITY_SPEED = {
     'Level1Bg0': 0.2,
@@ -31,15 +34,7 @@ ENTITY_HEALTH = {
     'Player': 100,
     'Shark': 25,
 }
-ENTITY_SCORE = {
-    'Level1Bg0': 0,
-    'Level1Bg1': 0,
-    'Level1Bg2': 0,
-    'Level1Bg3': 0,
-    'Level1Bg4': 0,
-    'Player': 0,
-}
-ENEMY_DAMAGE=5
+ENEMY_DAMAGE=100
 # F
 FRAME_WIDTH = 48
 FRAME_HEIGHT = 48
